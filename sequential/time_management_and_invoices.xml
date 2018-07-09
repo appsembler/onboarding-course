@@ -282,8 +282,12 @@
       </h3>
       <blockquote>
         <p>
-          Crafty sends a reminder on the last day of the month, to remind you to log all your time on JIRA.
-          Then it generates the invoice on the 3rd day of the month, and sends you an email with a link to approve it.
+          Crafty sends a reminder on the first day of the month, to remind you to log all your time for the previous month on JIRA.
+          Then:
+          <ul>
+            <li>It generates the invoice on the 3rd day of the month, and sends it to you by email</li>
+            <li>Until the 5th day of the month, you review it, report any issue (by replying to it) and approve it once ok (using a link included in the email)</li>
+            <li>The finalized invoice is generated on the 6th day of the month, and paid shortly afterwards.</li>
         </p>
       </blockquote>
     </html>
