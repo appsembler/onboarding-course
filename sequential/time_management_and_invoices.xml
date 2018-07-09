@@ -310,11 +310,10 @@
       <blockquote>
         <p>Make sure you send this information to Xavier by <a href="mailto:xavier@opencraft.com">email</a>:
           <ol>
-            <li>Company Name</li>
-            <li>VAT</li>
-            <li>IBAN</li>
-            <li>SWIFT</li>
-            <li>Account Number</li>
+            <li>Company name & full address</li>
+            <li>VAT number</li>
+            <li>Account IBAN or number (check with Xavier which one is needed - it depends on how Transferwise supports transfers to your country)</li>
+            <li>Bank name, address and BIC/SWIFT</li>
             <li>Any other applicable details</li>
           </ol>
           The entity holding the account and its address must match the address for you in your contract.
