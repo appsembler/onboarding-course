@@ -288,6 +288,7 @@
             <li>It generates the invoice on the 3rd day of the month, and sends it to you by email</li>
             <li>Until the 5th day of the month, you review it, report any issue (by replying to it) and approve it once ok (using a link included in the email)</li>
             <li>The finalized invoice is generated on the 6th day of the month, and paid shortly afterwards.</li>
+          </ul>
         </p>
       </blockquote>
     </html>
