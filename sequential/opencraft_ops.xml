@@ -1,0 +1,201 @@
+<sequential display_name="OpenCraft Operations">
+
+  <vertical display_name="Introduction" url_name="opencraft_ops_introduction">
+    <html url_name="opencraft_ops_introduction_1">
+      <p>
+        OpenCraft's engineering staff are all expected, at least at some level, to be
+        capable of DevOps-y tasks. At some point or another, you'll likely be involved in
+        SSHing into machines, looking at graphs of metrics of our infrastructure,
+        performing root cause analyses, deploying new servers, configuring machines with
+        Ansible, and so on.
+      </p>
+      <p>
+        For that reason, it's recommended you get familiar with our infrastructure and how
+        we generally handle operations, so you're prepared in advance.
+      </p>
+    </html>
+  </vertical>
+
+  <vertical display_name="The Life of a Request" url_name="opencraft_ops_the_life_of_a_request">
+    <html url_name="opencraft_ops_the_life_of_a_request_1">
+      <p>
+        We feel that an efficient way to on-board you initially onto how our infrastructure works
+        is to give you a quick overview of the life of a request sent to an Open edX appserver
+        that we host on OpenStack.
+      </p>
+      <p>
+        We only cover the Ocim &amp; OpenStack case, since they are quite customized. AWS requests go
+        through a different lifecycle, and since they are more specific to standard AWS deployment
+        setups which you may be familiar with from past work (e.g. using an ELB), we don't cover them.
+      </p>
+      <p>
+        Additionally, to keep this section compact enough, we only cover the specifically customized
+        pieces. That is, we don't cover the details of a request at the network access layer, nor
+        how Django handles it in the edx-platform -- those and others are things that're common to all
+        Open edX deployments, whether on OpenStack, AWS, or hosted by some other provider entirely.
+      </p>
+      <p>
+        Finally, there is a <em>lot</em> more to it than this. Our infrastructure is relatively vast
+        and diverse because of the large range of clients we have, the large number of technologies
+        needed to run Open edX successfully, and all of the peripheral things we need to be able to
+        monitor and understand our systems from a higher level.
+      </p>
+    </html>
+
+    <html url_name="opencraft_ops_the_life_of_a_request_2">
+      <h3>Getting an Open edX Instance</h3>
+      <p>
+        Before one can make a request to anything, they need a valid instance. Customers usually get this
+        by going to <a href="http://opencraft.com/hosting/">http://opencraft.com/hosting/</a> and picking
+        an option. Let's assume they chose the beta test version.
+      </p>
+      <p>
+        By default, when registering for an Open edX instance through the Ocim beta test feature, you choose
+        a subdomain under <code>opencraft.hosting</code>, e.g. <code>my-openedx-instance.opencraft.hosting</code>,
+        provided that it isn't already taken by somebody else.
+      </p>
+      <p>
+        Customers can also configure their own domain, such as "subdomain.example.com", but they'll need to set
+        specific DNS records for this, which requires a bit of collaboration with us to get it right.
+      </p>
+      <p>
+        So say one has registered <code>my-openedx-instance.opencraft.hosting</code> successfully,
+        and they've waited some time for their instance to be ready. They're excited and decide
+        to go check it out in their browser. Let's follow the story of their request.
+      </p>
+    </html>
+
+    <html url_name="opencraft_ops_the_life_of_a_request_3">
+      <h3>Hitting Enter</h3>
+      <p>
+        They open up their browser, and type <code>my-openedx-instance.opencraft.hosting</code>.
+      </p>
+      <p>
+        The browser assumes they're making an HTTP request, and rewrites the URL to prepend the HTTP scheme.
+        The URL is now really <code>http://my-openedx-instance.opencraft.hosting</code>.
+      </p>
+      <p>
+        Before the browser can really initiate the sending of the HTTP request, it needs to let lower
+        network layers know how to route it, which happens through the Internet Protocol (IP). However
+        only a domain was given, so DNS needs to be used to resolve the domain to an IP address.
+      </p>
+    </html>
+
+    <html url_name="opencraft_ops_the_life_of_a_request_4">
+      <h3>Resolving the Domain</h3>
+      <p>
+        The browser has a DNS cache, but it is empty because it's the first time the customer looks
+        up <code>my-openedx-instance.opencraft.hosting</code>. In effect, the browser asks the
+        recursive operating system resolver to get the IP address.
+      </p>
+      <p>
+        The system resolver also has a cache that doesn't have the IP address yet, nor any other
+        DNS records associated with this domain, so it needs to go to the root nameservers first.
+      </p>
+      <p>
+        The root nameservers and others in the hierarchy are non-recursive, so they only <em>point</em> the
+        system resolver to other, more authorative nameservers, rather than get the answers themselves
+        and hand them back to the system resolver. For <code>my-openedx-instance.opencraft.hosting</code>, the root
+        nameservers direct the system resolver to the "hosting" TLD nameservers.
+      </p>
+      <p>
+        Since <code>opencraft.hosting</code> is currently managed by the Gandi DNS provider, the TLD nameservers
+        direct the system resolver to Gandi nameservers. The system resolver queries the Gandi
+        nameservers about <code>my-openedx-instance.opencraft.hosting</code>, and they tell that
+        <code>haproxy.opencraft.hosting</code> happens to be the canonical name for <code>my-openedx-instance.opencraft.hosting</code>, and <code>haproxy.opencraft.hosting</code>
+        itself resolves to IP 178.32.102.81. Therefore, the Open edX instance's domain is actually
+        leading your request to the HAProxy load balancer.
+      </p>
+    </html>
+
+    <html url_name="opencraft_ops_the_life_of_a_request_5">
+      <h3>Sending the Request</h3>
+      <p>
+        IP in hand, your browser can initiate the HTTP request, because the lower layers of the network
+        now know how to route it.
+      </p>
+      <p>
+        When HAProxy first receives the request through one of its frontend listeners, it actually rewrites
+        it to use HTTPS rather than HTTP by default.
+      </p>
+      <p>
+        HAProxy terminates SSL connections to all Open edX backends on OpenStack, so after the TCP handshake
+        completes, the connected parties enter the TLS exchange. We have all SSL certificates for our Open
+        edX instances sitting on the HAProxy servers, which is what HAProxy provides the browser during that exchange.
+      </p>
+      <p>
+        A secure connection now allows the HTTP request to make its way to HAProxy safely. Once it's there,
+        HAProxy tries to match the URL of the request with a domain that is configured to be linked to a
+        particular HAProxy backend.
+      </p>
+      <p>
+        HAProxy opens a connection with the backend in question, which is protected with basic authentication
+        (e.g. username/password), and sends the authentication information in a header with the HTTP request.
+      </p>
+    </html>
+
+    <html url_name="opencraft_ops_the_life_of_a_request_6">
+      <h3>Receiving a Response</h3>
+      <p>
+        Not to go into detail, but once the Open edX server's nginx service has routed the request to the appropriate
+        local port, which corresponds to the LMS port by default, Django kicks in and parses the request, runs it
+        through all of the edx-platform's middleware logic, passes it to the correct view, gets back a response,
+        and passes that back to the webserver.
+      </p>
+      <p>
+        This response goes back to HAProxy. HAProxy is configured to look for certain HTTP codes.
+        Codes associated with server-side errors (in the 5xx range) redirect to <code>/error</code>.
+      </p>
+      <p>
+        HAProxy now sends the response to the client securely, which was the browser.
+        You know the rest from here.
+      </p>
+    </html>
+  </vertical>
+
+  <vertical display_name="Operations Ticket" url_name="opencraft_ops_operations_ticket">
+    <html url_name="opencraft_ops_operations_ticket_1">
+      <p>
+        Firstly, although we often talk about particular operational issues on tickets
+        relevant to them, we also log a lot that pop up out of nowhere on
+        <a href="https://tasks.opencraft.com/browse/OC-1867">OC-1867</a>. More details
+        about what an Ops Reviewer is will be given to you in other places in our documentation.
+      </p>
+    </html>
+
+    <html url_name="opencraft_ops_operations_ticket_2">
+      <p>
+        If you happen to be interested in following that thread, simply click
+        "Start watching this issue" on the top right corner under the "People" header
+        in JIRA.
+      </p>
+      <p>
+        Following conversations on that ticket is a nice way to be relatively up-to-date on
+        the state of our infrastructure, any recent problems and incidents, etc. That of course
+        doesn't replace the detailed conversations that take place on actual root cause analysis
+        documents or tickets, but it's a nice starting point.
+      </p>
+      <p>
+        If you yourself find an operational issue that needs to be communicated and triaged,
+        note it on the ticket -- don't be shy.
+      </p>
+    </html>
+  </vertical>
+
+  <vertical display_name="Diving Deeper" url_name="opencraft_ops_diving_deeper">
+    <html url_name="opencraft_ops_diving_deeper_1">
+      <p>
+        If this documentation about OpenCraft operations has interested you, and you'd like
+        to take on more DevOps tasks and dive deeper, take a look at our private
+        <a href="https://gitlab.com/opencraft/documentation/private/tree/master/ops">Ops documentation</a>,
+        which contains details on many different subjects.
+      </p>
+      <p>
+        Note that the private documentation is constantly evolving, so as always, if you
+        find mistakes or want something added, create a PR and ping people. If something
+        is not clear, raise an issue and ping people there as well.
+      </p>
+    </html>
+  </vertical>
+
+</sequential>

@@ -1,4 +1,5 @@
 <sequential display_name="Time management and invoices">
+
   <vertical display_name="Introduction" url_name="time_management_and_invoices_introduction">
     <html url_name="time_management_and_invoices_introduction_1">
       <p>
@@ -6,6 +7,7 @@
       </p>
     </html>
   </vertical>
+
   <vertical display_name="Time management" url_name="time_management_and_invoices_time_management">
     <html url_name="time_management_and_invoices_time_management_1">
       <p>
@@ -88,6 +90,7 @@
       </blockquote>
     </html>
   </vertical>
+
   <vertical display_name="Tips from the team members" url_name="time_management_and_invoices_tips_from_the_team_members">
     <html url_name="time_management_and_invoices_tips_from_the_team_members_1">
       <p>
@@ -254,6 +257,7 @@
       </p>
     </html>
   </vertical>
+
   <vertical display_name="Contact sheet" url_name="time_management_and_invoices_contact_sheet">
     <html url_name="time_management_and_invoices_contact_sheet_1">
     <p>
@@ -270,6 +274,7 @@
     </p>
     </html>
   </vertical>
+
   <vertical display_name="Invoices" url_name="time_management_and_invoices_invoices">
     <html url_name="time_management_and_invoices_invoices_1">
       <p>
@@ -318,4 +323,5 @@
       </blockquote>
     </html>
   </vertical>
+
 </sequential>
