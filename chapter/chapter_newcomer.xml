@@ -1,7 +1,6 @@
 <chapter display_name="A newcomer">
   <sequential url_name="introduction_newcomer"/>
   <sequential url_name="opencraft"/>
-  <sequential url_name="whats_expected"/>
   <sequential url_name="time_management_and_invoices"/>
   <sequential url_name="security"/>
   <sequential url_name="open_edx_devstack"/>

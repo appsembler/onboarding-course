@@ -9,7 +9,7 @@
         <checkboxgroup>
           <choice correct="true">
             Read and bookmark
-            <a href="https://github.com/open-craft/documentation/blob/master/Glossary.md">
+            <a href="http://opencraft.com/doc/handbook/glossary/">
               OpenCraft's glossary
             </a>
           </choice>
@@ -21,13 +21,13 @@
           </choice>
           <choice correct="true">
             Read about 
-            <a href="https://github.com/open-craft/documentation/blob/master/task_workflows.md">
+            <a href="http://opencraft.com/doc/handbook/task_workflows/">
               task workflows
             </a>
           </choice>
           <choice correct="true">
             Read about coding standards:
-            <a href="https://github.com/open-craft/documentation/blob/master/pdfs/CodeReviewGuidelinesandGotchas-2017-25-07.pdf">
+            <a href="https://gitlab.com/opencraft/documentation/private/blob/master/pdfs/CodeReviewGuidelinesandGotchas-2017-25-07.pdf">
               Code Review Guidelines and Gotchas
             </a>, 
             <a href="http://edx.readthedocs.io/projects/edx-developer-guide/en/latest/style_guides/python-guidelines.html">
@@ -36,7 +36,7 @@
           </choice>
           <choice correct="true">
             Read about the 
-            <a href="https://github.com/open-craft/documentation/blob/master/tools_we_use.md">
+            <a href="https://gitlab.com/opencraft/documentation/private/blob/master/tools_we_use.md">
               tools we use
             </a>
           </choice>
@@ -63,13 +63,13 @@
           </choice>
           <choice correct="true">
             Read
-            <a href="https://github.com/open-craft/documentation/blob/master/Pull_request_process.md">
+            <a href="http://opencraft.com/doc/handbook/pull_request_process/">
               Pull request process docs
             </a>
           </choice>
           <choice correct="true">
             Read
-            <a href="https://github.com/open-craft/documentation/blob/master/sandboxes_howto.md">
+            <a href="https://gitlab.com/opencraft/documentation/private/blob/master/howtos/sandboxes.md">
               Sandboxes how to
             </a>
           </choice>
