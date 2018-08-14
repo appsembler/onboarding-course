@@ -45,9 +45,9 @@
           you should assign this time to the epics themselves (splitting
           roughly over a given period of time, it doesn't need to be 100% exact).
           Or on the tickets themselves if you read them. For things like the meeting itself,
-          or things in sprint planning that aren't related to any epic, there is OC-515,
-          but it should be kept to a minimum, since we can't differentiate which projects
-          the time logged on that epic was spent on, which makes it difficult
+          or things in sprint planning that aren't related to any epic, there is
+          <a href="https://tasks.opencraft.com/browse/OC-515">OC-515</a>, but it should be kept to a minimum, since
+          we can't differentiate which projects the time logged on that epic was spent on, which makes it difficult
           to properly invoice clients afterwards.
         </p>
         <p>

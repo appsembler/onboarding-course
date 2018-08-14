@@ -2,3 +2,16 @@
   Please skim through the
   <a href="http://edx.readthedocs.io/projects/xblock-tutorial/en/latest/index.html" target="_blank">XBlock Tutorial</a>.
 </p>
+<p>
+  <strong>Note:</strong> In the edX XBlock creation tutorial, the database migrations fail because they are expecting
+  the directory
+  <code>var</code> to exist. To solve this issue you simply need to create that directory.
+</p>
+<p>
+  <strong>Note:</strong> There is an invalid python interpreter command <code>python no</code> mentioned in
+  <a href="http://edx.readthedocs.io/projects/xblock-tutorial/en/latest/getting_started/create_first_xblock.html#create-the-sqlite-database">
+    this page
+  </a>
+  of the XBlock tutorial. What they meant is to tell you to type <code>no</code> not
+  <strike><code>python no</code></strike>, so be aware.
+</p>
