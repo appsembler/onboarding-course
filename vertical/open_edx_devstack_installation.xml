@@ -1,4 +1,5 @@
 <vertical display_name="Installation">
   <html url_name="open_edx_devstack_installation_1"/>
+  <html url_name="open_edx_analytics_devstack_installation"/>
   <html url_name="open_edx_devstack_installation_2"/>
 </vertical>
