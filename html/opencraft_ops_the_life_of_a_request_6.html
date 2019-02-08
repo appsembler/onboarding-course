@@ -1,0 +1,12 @@
+<h3>Receiving a Response</h3><p>
+        Not to go into detail, but once the Open edX server's nginx service has routed the request to the appropriate
+        local port, which corresponds to the LMS port by default, Django kicks in and parses the request, runs it
+        through all of the edx-platform's middleware logic, passes it to the correct view, gets back a response,
+        and passes that back to the webserver.
+      </p><p>
+        This response goes back to HAProxy. HAProxy is configured to look for certain HTTP codes.
+        Codes associated with server-side errors (in the 5xx range) redirect to <code>/error</code>.
+      </p><p>
+        HAProxy now sends the response to the client securely, which was the browser.
+        You know the rest from here.
+      </p>

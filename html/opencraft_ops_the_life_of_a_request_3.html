@@ -1,0 +1,10 @@
+<h3>Hitting Enter</h3><p>
+        They open up their browser, and type <code>my-openedx-instance.opencraft.hosting</code>.
+      </p><p>
+        The browser assumes they're making an HTTP request, and rewrites the URL to prepend the HTTP scheme.
+        The URL is now really <code>http://my-openedx-instance.opencraft.hosting</code>.
+      </p><p>
+        Before the browser can really initiate the sending of the HTTP request, it needs to let lower
+        network layers know how to route it, which happens through the Internet Protocol (IP). However
+        only a domain was given, so DNS needs to be used to resolve the domain to an IP address.
+      </p>

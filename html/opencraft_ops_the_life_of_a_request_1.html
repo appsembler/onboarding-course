@@ -1,0 +1,19 @@
+<p>
+        We feel that an efficient way to on-board you initially onto how our infrastructure works
+        is to give you a quick overview of the life of a request sent to an Open edX appserver
+        that we host on OpenStack.
+      </p><p>
+        We only cover the Ocim &amp; OpenStack case, since they are quite customized. AWS requests go
+        through a different lifecycle, and since they are more specific to standard AWS deployment
+        setups which you may be familiar with from past work (e.g. using an ELB), we don't cover them.
+      </p><p>
+        Additionally, to keep this section compact enough, we only cover the specifically customized
+        pieces. That is, we don't cover the details of a request at the network access layer, nor
+        how Django handles it in the edx-platform -- those and others are things that're common to all
+        Open edX deployments, whether on OpenStack, AWS, or hosted by some other provider entirely.
+      </p><p>
+        Finally, there is a <em>lot</em> more to it than this. Our infrastructure is relatively vast
+        and diverse because of the large range of clients we have, the large number of technologies
+        needed to run Open edX successfully, and all of the peripheral things we need to be able to
+        monitor and understand our systems from a higher level.
+      </p>

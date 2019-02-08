@@ -1,41 +1,12 @@
-<p>
-  The devstack is a complete working install of Open edX on your computer.
-  With it, you make changes to code locally and view those changes by visiting
-  urls in your browser.
-</p>
-<p>
-  There are two versions of the edX devstack.
-</p>
-<p>
-  A <a href="https://github.com/edx/devstack">Docker version</a>
-  and a deprecated <a href="https://gitlab.com/opencraft/documentation/private/blob/master/howtos/devstack_setup.md">Vagrant version</a>.
-  While at some point in time you are likely going to
-  need <strong>both</strong> working, you should focus on
-  getting the Docker devstack up first.
-</p>
-<p>
-  This <a href="https://www.youtube.com/embed/J_-mhrRSYyQ?start=3081">talk</a>
-  (<a href="https://openedx.atlassian.net/wiki/download/attachments/756384075/Navigating%20the%20Docker%20Devstack%20Presentation.pdf?version=1&modificationDate=1528315993270&cacheVersion=1&api=v2">slides</a>),
-  given by our own team members, is an optional introduction to the docker
-  devstack.
-</p>
-<p>
-  Much of the work that Open-Craft creates ends up being upstreamed
-  to <a href="https://github.com/edx/edx-platform">edx/edx-platform</a>.
-  This repository is the latest code and works very well with the newer Docker
-  devstack. While the Vagrant devstack works as well for master work, it can be
-  complicated and many people have had issues with getting it to work.
-</p>
-<p>
-  For many client projects, the Vagrant devstack is a <strong>must</strong>.
-  <a href="https://github.com/mckinseyacademy/mcka_apros/blob/master/docs/SetupNotes.md">McKinsey Apros</a>
-  and legacy systems that are not using the latest edx/edx-platform require
-  the use of a Vagrant devstack. Until you are working on one of these tickets,
-  or have some free cycles to put towards downloading and waiting it may be best
-  to avoid setting up the Vagrant devstack.
-</p>
-<p>
-  Having said that, until things change, you'll eventually need both working.
-  If you're not sure which one to choose, please ask the reviewer of your
-  on-boarding JIRA task.
-</p>
+<p>A developer stack (or&nbsp;devstack) is a complete working install of Open edX on your computer. With it, you make changes to code locally and view those changes by visiting urls in your browser.</p>
+<p>There are&nbsp;many&nbsp;versions of the edX devstack, but we can separate them into two categories:</p>
+<ul>
+<li><a href="https://github.com/edx/devstack" target="[object Object]">Docker devstacks</a></li>
+<li><a href="https://gitlab.com/opencraft/documentation/private/blob/master/howtos/devstack_setup.md">Vagrant devstacks</a></li>
+</ul>
+<p>While at some point in time you are likely going to need <strong>both</strong>&nbsp;types working, you should focus on getting the <strong>Docker devstack with the <a href="https://edx.readthedocs.io/projects/edx-developer-docs/en/latest/named_releases.html#latest-open-edx-release" target="[object Object]">current release</a>&nbsp;</strong>of Open Edx&nbsp;up first.</p>
+<p>Much of the work that Open-Craft creates ends up being upstreamed to <a href="https://github.com/edx/edx-platform">edx/edx-platform</a>. This repository is the latest code and works very well with the newer Docker devstack. While the Vagrant devstack works as well for master work, it can be complicated and many people have had issues with getting it to work.</p>
+<p>For many client projects, the Vagrant devstack is a <strong>must</strong>. <a href="https://github.com/mckinseyacademy/mcka_apros/blob/master/docs/SetupNotes.md">McKinsey Apros</a> and legacy systems that are not using the latest edx/edx-platform <strong>require the use of a Vagrant devstack</strong>. Until you are working on one of these tickets, or have some free cycles to put towards downloading and waiting it may be best to avoid setting up the Vagrant devstack.</p>
+<p>Having said that, until things change, <strong>you'll eventually have&nbsp;many devstacks</strong> set up on your local machine. But for now, focus on the ones needed for your tasks, and if you're not sure which one to choose, please ask the reviewer of your on-boarding JIRA task.</p>
+<p>The following sections have instructions on how to set up each devstack, feel free to skip the ones you&nbsp;won't use for now&nbsp;and come back to them when you need.</p>
+<p>When provisioning devstacks, keep in mind that they are not compatible with Windows systems, only Linux and Mac systems.</p>
