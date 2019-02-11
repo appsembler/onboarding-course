@@ -1,6 +1,11 @@
 <sequential display_name="Open edX devstack">
   <vertical url_name="open_edx_devstack_introduction"/>
+  <vertical url_name="open_edx_intro"/>
   <vertical url_name="open_edx_devstack_installation"/>
+  <vertical url_name="open_edx_setting_up_docker_devstack"/>
+  <vertical url_name="open_edx_setting_up_vagrant_devstack"/>
+  <vertical url_name="open_edx_setting_up_solutions_devstack"/>
+  <vertical url_name="open_edx_analytics_devstack_installation"/>
   <vertical url_name="open_edx_devstack_pycharm_integration"/>
   <vertical url_name="open_edx_devstack_tips_and_tricks"/>
   <vertical url_name="open_edx_devstack_client_devstacks"/>

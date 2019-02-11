@@ -1,0 +1,20 @@
+<h3>Resolving the Domain</h3><p>
+        The browser has a DNS cache, but it is empty because it's the first time the customer looks
+        up <code>my-openedx-instance.opencraft.hosting</code>. In effect, the browser asks the
+        recursive operating system resolver to get the IP address.
+      </p><p>
+        The system resolver also has a cache that doesn't have the IP address yet, nor any other
+        DNS records associated with this domain, so it needs to go to the root nameservers first.
+      </p><p>
+        The root nameservers and others in the hierarchy are non-recursive, so they only <em>point</em> the
+        system resolver to other, more authorative nameservers, rather than get the answers themselves
+        and hand them back to the system resolver. For <code>my-openedx-instance.opencraft.hosting</code>, the root
+        nameservers direct the system resolver to the "hosting" TLD nameservers.
+      </p><p>
+        Since <code>opencraft.hosting</code> is currently managed by the Gandi DNS provider, the TLD nameservers
+        direct the system resolver to Gandi nameservers. The system resolver queries the Gandi
+        nameservers about <code>my-openedx-instance.opencraft.hosting</code>, and they tell that
+        <code>haproxy.opencraft.hosting</code> happens to be the canonical name for <code>my-openedx-instance.opencraft.hosting</code>, and <code>haproxy.opencraft.hosting</code>
+        itself resolves to IP 178.32.102.81. Therefore, the Open edX instance's domain is actually
+        leading your request to the HAProxy load balancer.
+      </p>
