@@ -67,6 +67,9 @@
             Make sure that your laptop's home folder/partition (or your whole disk) is encrypted
           </choice>
       <choice correct="true">
+            Complete the <a href="https://www.udemy.com/intro-to-the-general-data-protection-regulation-gdpr/learn/v4/overview">GDPR Course</a>
+          </choice>
+      <choice correct="true">
             Read
             <a href="http://opencraft.com/doc/handbook/pull_request_process/">
               Pull request process docs
