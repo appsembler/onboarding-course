@@ -7,7 +7,7 @@
     <checkboxgroup>
       <choice correct="true">
             Read and bookmark
-            <a href="http://opencraft.com/doc/handbook/glossary/">
+            <a href="https://handbook.opencraft.com/en/latest/glossary/">
               OpenCraft's glossary
             </a>
           </choice>
@@ -26,7 +26,7 @@
           </choice>
       <choice correct="true">
             Read about 
-            <a href="http://opencraft.com/doc/handbook/task_workflows/">
+            <a href="https://handbook.opencraft.com/en/latest/task_workflows/">
               task workflows
             </a>
           </choice>
@@ -71,7 +71,7 @@
           </choice>
       <choice correct="true">
             Read
-            <a href="http://opencraft.com/doc/handbook/pull_request_process/">
+            <a href="https://handbook.opencraft.com/en/latest/pull_request_process/">
               Pull request process docs
             </a>
           </choice>
