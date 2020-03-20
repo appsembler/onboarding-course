@@ -1,18 +1,6 @@
-<h3>Sending the Request</h3><p>
-        IP in hand, your browser can initiate the HTTP request, because the lower layers of the network
-        now know how to route it.
-      </p><p>
-        When HAProxy first receives the request through one of its frontend listeners, it actually rewrites
-        it to use HTTPS rather than HTTP by default.
-      </p><p>
-        HAProxy terminates SSL connections to all Open edX backends on OpenStack, so after the TCP handshake
-        completes, the connected parties enter the TLS exchange. We have all SSL certificates for our Open
-        edX instances sitting on the HAProxy servers, which is what HAProxy provides the browser during that exchange.
-      </p><p>
-        A secure connection now allows the HTTP request to make its way to HAProxy safely. Once it's there,
-        HAProxy tries to match the URL of the request with a domain that is configured to be linked to a
-        particular HAProxy backend.
-      </p><p>
-        HAProxy opens a connection with the backend in question, which is protected with basic authentication
-        (e.g. username/password), and sends the authentication information in a header with the HTTP request.
-      </p>
+<h3>Sending the Request</h3>
+<p>IP in hand, your browser can initiate the HTTP request, because the lower layers of the network now know how to route it.</p>
+<p>When HAProxy receives the request through one of its frontend listeners, it decrypts the request and forwards the unencrypted request onto the appropriate backend servers. This is commonly referred to as a <a href="https://en.wikipedia.org/wiki/TLS_termination_proxy">TLS/SSL Termination Proxy</a>.</p>
+<p>HAProxy terminates SSL connections to all Open edX backends on OpenStack, so after the TCP handshake completes, the connected parties enter the TLS exchange. We have all SSL certificates for our Open edX instances sitting on the HAProxy servers, which is what HAProxy provides the browser during that exchange.</p>
+<p>A secure connection now allows the HTTP request to make its way to HAProxy safely. Once it's there, HAProxy tries to match the URL of the request with a domain that is configured to be linked to a particular HAProxy backend.</p>
+<p>HAProxy opens a connection with the backend in question, which is protected with basic authentication (e.g. username/password), and sends the authentication information in a header with the HTTP request.</p>
