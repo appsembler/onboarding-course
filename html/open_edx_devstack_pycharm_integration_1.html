@@ -1,17 +1,13 @@
-<p>
-  If you would like to integrate the Open edX devstack with PyCharm, please see
-  the following docs:
-</p>
+<p>Open edX has extensive <a href="https://openedx.atlassian.net/wiki/spaces/AC/pages/92209202">documentation</a> on integrating your favorite IDE with devstack.</p>
+
+<p>See below for more details about specific IDEs:</p>
 <ul>
-  <li>
-    <a href="https://github.com/edx/devstack/blob/master/docs/pycharm_integration.rst" target="_blank">these docs</a>
-    for the integration of Docker-based devstack
-  </li>
-  <li>
-    <a href="https://openedx.atlassian.net/wiki/spaces/OpenDev/pages/99910557/Working+with+devstack+and+PyCharm" target="_blank">this Open edX wiki page</a>
-    for the integration of the Vagrant-based one.
-  </li>
+<li><p>PyCharm: <a href="https://github.com/edx/devstack/blob/master/docs/pycharm_integration.rst">Docker devstack</a>,
+<a href="https://openedx.atlassian.net/wiki/spaces/OpenDev/pages/99910557/Working+with+devstack+and+PyCharm">Vagrant devstack</a></p>
+    <p><strong>Note:</strong> there is currently <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000210730-Pycharm-Debugger-hangs-when-using-with-docker-compose">a problem</a> with hanging debugger with docker-compose in PyCharm. The hack for this is to create separate config for running debug with additional option <code>--noreload</code>. Please check <a href="https://youtrack.jetbrains.com/issue/PY-24191">this YouTrack ticket</a> to see the issue status.</p>
+</li>
+<li>VS Code: <a href="https://opencraft.com/blog/tutorial-attaching-visual-studio-code-to-devstack-lms-container/">Docker Devstack</a>.</li>
+<li>
+Vim: <a href="https://openedx.atlassian.net/wiki/spaces/AC/pages/92209207/Vim">Any devstack</a>.
+</li>
 </ul>
-<p>
-  <b>Note:</b> there is currently <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000210730-Pycharm-Debugger-hangs-when-using-with-docker-compose">a problem</a> with hanging debugger with docker-compose in PyCharm. The hack for this is to create separate config for running debug with additional option `--noreload`. Please check <a href="https://youtrack.jetbrains.com/issue/PY-24191">this YouTrack ticket</a> to see the issue status.
-</p>
