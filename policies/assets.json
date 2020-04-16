@@ -1,25 +1,97 @@
 {
-    "opencraftlogo.png": {
-        "contentType": "image/png", 
+    "notifications.png": {
+        "contentType": "image/png",
         "content_son": {
-            "category": "asset", 
-            "course": "onboarding", 
-            "name": "opencraftlogo.png", 
-            "org": "OpenCraft", 
-            "revision": null, 
-            "run": "course", 
+            "category": "asset",
+            "course": "onboarding",
+            "name": "notifications.png",
+            "org": "OpenCraft",
+            "revision": null,
+            "run": "course",
             "tag": "c4x"
-        }, 
-        "displayname": "opencraftlogo.png", 
-        "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@opencraftlogo.png", 
-        "import_path": "opencraftlogo.png", 
-        "locked": false, 
+        },
+        "displayname": "notifications.png",
+        "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@notifications.png",
+        "import_path": null,
+        "locked": false,
         "thumbnail_location": [
-            "c4x", 
-            "OpenCraft", 
-            "onboarding", 
-            "thumbnail", 
-            "opencraftlogo-png.jpg", 
+            "c4x",
+            "OpenCraft",
+            "onboarding",
+            "thumbnail",
+            "notifications-png.jpg",
+            null
+        ]
+    },
+    "notificationsound.jpg": {
+        "contentType": "image/jpeg",
+        "content_son": {
+            "category": "asset",
+            "course": "onboarding",
+            "name": "notificationsound.jpg",
+            "org": "OpenCraft",
+            "revision": null,
+            "run": "course",
+            "tag": "c4x"
+        },
+        "displayname": "notificationsound.jpg",
+        "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@notificationsound.jpg",
+        "import_path": null,
+        "locked": false,
+        "thumbnail_location": [
+            "c4x",
+            "OpenCraft",
+            "onboarding",
+            "thumbnail",
+            "notificationsound.jpg",
+            null
+        ]
+    },
+    "opencraftlogo.png": {
+        "contentType": "image/png",
+        "content_son": {
+            "category": "asset",
+            "course": "onboarding",
+            "name": "opencraftlogo.png",
+            "org": "OpenCraft",
+            "revision": null,
+            "run": "course",
+            "tag": "c4x"
+        },
+        "displayname": "opencraftlogo.png",
+        "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@opencraftlogo.png",
+        "import_path": "opencraftlogo.png",
+        "locked": false,
+        "thumbnail_location": [
+            "c4x",
+            "OpenCraft",
+            "onboarding",
+            "thumbnail",
+            "opencraftlogo-png.jpg",
+            null
+        ]
+    },
+    "rotationpolicy.png": {
+        "contentType": "image/png",
+        "content_son": {
+            "category": "asset",
+            "course": "onboarding",
+            "name": "rotationpolicy.png",
+            "org": "OpenCraft",
+            "revision": null,
+            "run": "course",
+            "tag": "c4x"
+        },
+        "displayname": "rotationpolicy.png",
+        "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@rotationpolicy.png",
+        "import_path": null,
+        "locked": false,
+        "thumbnail_location": [
+            "c4x",
+            "OpenCraft",
+            "onboarding",
+            "thumbnail",
+            "rotationpolicy-png.jpg",
             null
         ]
     }
