@@ -1,4 +1,76 @@
 {
+    "forum-watching-category.png": {
+        "contentType": "image/png",
+        "content_son": {
+            "category": "asset",
+            "course": "onboarding",
+            "name": "forum-watching-category.png",
+            "org": "OpenCraft",
+            "revision": null,
+            "run": "course",
+            "tag": "c4x"
+        },
+        "displayname": "forum-watching-category.png",
+        "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@forum-watching-category.png",
+        "import_path": null,
+        "locked": false,
+        "thumbnail_location": [
+            "c4x",
+            "OpenCraft",
+            "onboarding",
+            "thumbnail",
+            "forum-watching-category-png.jpg",
+            null
+        ]
+    },
+    "jira-bulk-edit-unwatch.png": {
+        "contentType": "image/png",
+        "content_son": {
+            "category": "asset",
+            "course": "onboarding",
+            "name": "jira-bulk-edit-unwatch.png",
+            "org": "OpenCraft",
+            "revision": null,
+            "run": "course",
+            "tag": "c4x"
+        },
+        "displayname": "jira-bulk-edit-unwatch.png",
+        "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@jira-bulk-edit-unwatch.png",
+        "import_path": null,
+        "locked": false,
+        "thumbnail_location": [
+            "c4x",
+            "OpenCraft",
+            "onboarding",
+            "thumbnail",
+            "jira-bulk-edit-unwatch-png.jpg",
+            null
+        ]
+    },
+    "jira-bulk-edit.png": {
+        "contentType": "image/png",
+        "content_son": {
+            "category": "asset",
+            "course": "onboarding",
+            "name": "jira-bulk-edit.png",
+            "org": "OpenCraft",
+            "revision": null,
+            "run": "course",
+            "tag": "c4x"
+        },
+        "displayname": "jira-bulk-edit.png",
+        "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@jira-bulk-edit.png",
+        "import_path": null,
+        "locked": false,
+        "thumbnail_location": [
+            "c4x",
+            "OpenCraft",
+            "onboarding",
+            "thumbnail",
+            "jira-bulk-edit-png.jpg",
+            null
+        ]
+    },
     "notifications.png": {
         "contentType": "image/png",
         "content_son": {
@@ -12,7 +84,7 @@
         },
         "displayname": "notifications.png",
         "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@notifications.png",
-        "import_path": null,
+        "import_path": "notifications.png",
         "locked": false,
         "thumbnail_location": [
             "c4x",
@@ -36,7 +108,7 @@
         },
         "displayname": "notificationsound.jpg",
         "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@notificationsound.jpg",
-        "import_path": null,
+        "import_path": "notificationsound.jpg",
         "locked": false,
         "thumbnail_location": [
             "c4x",
@@ -84,7 +156,7 @@
         },
         "displayname": "rotationpolicy.png",
         "filename": "asset-v1:OpenCraft+onboarding+course+type@asset+block@rotationpolicy.png",
-        "import_path": null,
+        "import_path": "rotationpolicy.png",
         "locked": false,
         "thumbnail_location": [
             "c4x",
