@@ -1,6 +1,10 @@
 <course catalog_visibility="both" cert_html_view_enabled="true" course_image="opencraftlogo.png" display_name="OpenCraft's on-boarding" graceperiod="" instructor_info="{&quot;instructors&quot;: []}" invitation_only="false" language="en" learning_info="[]" minimum_grade_credit="0.8" no_grade="true" start="&quot;2017-08-29T00:00:00+00:00&quot;">
   <chapter url_name="chapter_newcomer"/>
+  <chapter url_name="week_1"/>
+  <chapter url_name="week_2"/>
+  <chapter url_name="week_3"/>
+  <chapter url_name="task_specific"/>
   <chapter url_name="chapter_core"/>
   <chapter url_name="chapter_license"/>
-  <wiki slug="OpenCraft.onboarding.course"/>
+  <wiki slug="OpenCraft.onboarding-dev.course"/>
 </course>

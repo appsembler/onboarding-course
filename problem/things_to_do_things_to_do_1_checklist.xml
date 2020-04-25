@@ -1,21 +1,23 @@
-<problem url_name="things_to_do_things_to_do_1_checklist" display_name="Checklist" markdown="null">
+<problem url_name="things_to_do_things_to_do_1_checklist" display_name="Things to do checklist" markdown="null">
   <choiceresponse>
     <p>
-          This is a list of the things that you had to do as part of this course. You can use it as reminder of them.
+          This is a list of the things that you will need to do as part of this course.
+    </p>
+    <p>
+          You can use it as a way of keeping track of your progress through the course and what's left to do.
+    </p>
+    <p>
+
           To make sure the changes are not lost, don't forget to click on submit once you make a change.
         </p>
     <checkboxgroup>
       <choice correct="true">
-            Read and bookmark
+            Bookmark
             <a href="https://handbook.opencraft.com/en/latest/glossary/">
               OpenCraft's glossary
-            </a>
-          </choice>
-      <choice correct="true">
-            Read and bookmark
-            <a href="http://edx.readthedocs.io/projects/edx-partner-course-staff/en/latest/glossary.html">
+            </a> and <a href="http://edx.readthedocs.io/projects/edx-partner-course-staff/en/latest/glossary.html">
               EdX's glossary
-            </a>
+            </a>, so you can reference them when you encounter unfamiliar terms.
           </choice>
       <choice correct="true">
             Read
@@ -25,7 +27,7 @@
             to know more about the remote work culture.
           </choice>
       <choice correct="true">
-            Read about 
+            Read about
             <a href="https://handbook.opencraft.com/en/latest/task_workflows/">
               task workflows
             </a>
@@ -34,19 +36,19 @@
             Read about coding standards:
             <a href="http://edx.readthedocs.io/projects/edx-developer-guide/en/latest/conventions/index.html">
               Open edX Developer's Guide
-            </a>, 
+            </a>,
             <a href="http://edx.readthedocs.io/projects/edx-developer-guide/en/latest/style_guides/python-guidelines.html">
               edX Python Coding Standards
             </a>
           </choice>
       <choice correct="true">
-            Read about the 
+            Read about the
             <a href="https://gitlab.com/opencraft/documentation/private/blob/master/tools_we_use.md">
               tools we use
             </a>
           </choice>
       <choice correct="true">
-            Read the 
+            Read the
             <a href="https://github.com/open-craft/opencraft/">
               introduction to OCIM
             </a>
