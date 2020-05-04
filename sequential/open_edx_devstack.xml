@@ -1,4 +1,4 @@
-<sequential display_name="Open edX devstack">
+<sequential display_name="Open edX devstack" start="&quot;2017-08-29T00:00:00+00:00&quot;">
   <vertical url_name="open_edx_devstack_introduction"/>
   <vertical url_name="open_edx_intro"/>
   <vertical url_name="open_edx_devstack_installation"/>
