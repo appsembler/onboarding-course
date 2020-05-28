@@ -1,12 +1,12 @@
-<p>A developer stack (or&nbsp;devstack) is a complete working install of Open edX on your computer. With it, you make changes to code locally and view those changes by visiting urls in your browser.</p>
-<p>There are&nbsp;many&nbsp;versions of the edX devstack, but we can separate them into two categories:</p>
+<p>A developer stack (or devstack) is a complete working install of Open edX on your computer. With it, you make changes to code locally and view those changes by visiting urls in your browser.</p>
+<p>There are many versions of the edX devstack, but we can separate them into two categories:</p>
 <ul>
 <li><a href="https://github.com/edx/devstack">Docker devstacks</a></li>
 <li><a href="https://gitlab.com/opencraft/documentation/private/blob/master/howtos/devstack_setup.md">Vagrant devstacks</a></li>
 </ul>
-<p>While at some point in time you are likely going to need <strong>both</strong>&nbsp;types working, you should focus on getting the <strong>Docker devstack with the <a href="https://edx.readthedocs.io/projects/edx-developer-docs/en/latest/named_releases.html#latest-open-edx-release">current release</a>&nbsp;</strong>of Open Edx&nbsp;up first.</p>
+<p>While at some point in time you are likely going to need <strong>both</strong> types working, you should focus on getting the <strong>Docker devstack with the <a href="https://edx.readthedocs.io/projects/edx-developer-docs/en/latest/named_releases.html#latest-open-edx-release">current release</a> </strong>of Open Edx up first.</p>
 <p>Much of the work that Open-Craft creates ends up being upstreamed to <a href="https://github.com/edx/edx-platform">edx/edx-platform</a>. This repository is the latest code and works very well with the newer Docker devstack. </p>
 <p>For some client projects, the Vagrant devstack is a <strong>must</strong>. <a href="https://github.com/mckinseyacademy/mcka_apros/blob/master/docs/SetupNotes.md">McKinsey Apros</a> and legacy systems that are not using the latest edx/edx-platform <strong>require the use of a Vagrant devstack</strong>. Until you are actually working on a ticket relating to one of these older versions, it may be best to avoid setting up the Vagrant devstack, since it can take a long time to download and build.</p>
-<p>Having said that, until things change, <strong>you'll eventually have&nbsp;many devstacks</strong> set up on your local machine. But for now, focus on the ones needed for your tasks, and if you're not sure which one to choose, please ask the reviewer of your on-boarding JIRA task.</p>
-<p>The following sections have instructions on how to set up each devstack, feel free to skip the ones you&nbsp;won't use for now&nbsp;and come back to them when you need.</p>
+<p>Having said that, until things change, <strong>you'll eventually have many devstacks</strong> set up on your local machine. But for now, focus on the ones needed for your tasks, and if you're not sure which one to choose, please ask the reviewer of your on-boarding JIRA task.</p>
+<p>The following sections have instructions on how to set up each devstack, feel free to skip the ones you won't use for now and come back to them when you need.</p>
 <p>When provisioning devstacks, keep in mind that they are not compatible with Windows systems, only Linux and Mac systems.</p>
