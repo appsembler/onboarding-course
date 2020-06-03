@@ -1,11 +1,11 @@
 <p><strong>You will not need this now! Come back to these instructions if you need a Vagrant devstack for a particular client.</strong></p>
 <p>The vagrant devstack is required to work on most of <strong>ginkgo</strong> instances of Open EdX, and setting it up may be a difficult task at first.</p>
 <p>To set it up, follow these steps:</p>
-<p>1. Create a new folder to hold your vagrant devstack (e.g&nbsp;<code>~/vagrant_devstack</code>).</p>
-<p>2. Set up the release environment variable (usually&nbsp;<strong>open-release/ginkgo.1</strong>)</p>
-<p><code>export&nbsp;OPENEDX_RELEASE=open-release/ginkgo.1</code></p>
+<p>1. Create a new folder to hold your vagrant devstack (e.g <code>~/vagrant_devstack</code>).</p>
+<p>2. Set up the release environment variable (usually <strong>open-release/ginkgo.1</strong>)</p>
+<p><code>export OPENEDX_RELEASE=open-release/ginkgo.1</code></p>
 <p>3. Clone the Vagrantfile and install required virtual hosts plugin by running:</p>
-<p><code>curl&nbsp;-OL&nbsp;https://raw.github.com/edx/configuration/$OPENEDX_RELEASE/vagrant/release/devstack/Vagrantfile</code></p>
+<p><code>curl -OL https://raw.github.com/edx/configuration/$OPENEDX_RELEASE/vagrant/release/devstack/Vagrantfile</code></p>
 <p><code>vagrant plugin install vagrant-vbguest</code></p>
 <p>4. Provision the devstack with:</p>
 <p><code>vagrant up</code></p>

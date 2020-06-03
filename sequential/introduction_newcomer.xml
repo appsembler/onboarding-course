@@ -1,5 +1,6 @@
 <sequential display_name="Welcome!">
   <vertical url_name="introduction_newcomer_congratulations"/>
   <vertical url_name="a_quick_note"/>
+  <vertical url_name="opencraft_glossary"/>
   <vertical url_name="things_to_do"/>
 </sequential>
